@@ -12,9 +12,9 @@ const root = createRoot(container);
 
 root.render(
   <React.StrictMode>
-    <BrowserRouter basename="/Market">
+    <BrowserRouter basename='/Market'>
       <Provider store={store}>
-        <App />
+        <App></App>
       </Provider>
     </BrowserRouter>
   </React.StrictMode>
