@@ -2,7 +2,7 @@
   "name": "market",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://VeronikaMezentseva.github.io/Market",
+  "homepage": "https://VeronikaMezentseva.github.io",
   "dependencies": {
     "@reduxjs/toolkit": "^2.2.7",
     "@testing-library/jest-dom": "^5.17.0",
