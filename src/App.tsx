@@ -1,7 +1,7 @@
 import { useEffect } from "react";
 import "./App.css";
 import { Header } from "./components/header/Header";
-import { Route, Routes } from "react-router-dom";
+import { Route, Routes, useLocation } from "react-router-dom";
 import { HomePage } from "./pages/home-page/HomePage";
 import { ProductsPage } from "./pages/products-page/ProductsPage";
 import { useDispatch } from "./app/store";
@@ -12,6 +12,7 @@ import { CreateProductPage } from "./pages/create-product-page/CreateProductPage
 function App() {
 
   const dispatch = useDispatch();
+  const location = useLocation();
 
   useEffect(() => {
     dispatch(getProducts());
@@ -20,7 +21,7 @@ function App() {
   return (
     <>
       <Header></Header>
-      <Routes>
+      <Routes location={location}>
         <Route path="/" element={<HomePage />}></Route>
         <Route path="/products" element={<ProductsPage />}></Route>
         <Route path="/products/:id" element={<ProductPage />}></Route>
