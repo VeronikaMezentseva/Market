@@ -9,7 +9,7 @@ type TServerResponse<T> = {
 } & T;
 
 export const getProductsApi: () => Promise<TProduct[]> = () =>
-  fetch("http://178.208.65.23:3000/posts", {
+  fetch("https://178.208.65.23/posts", {
     method: "GET",
     headers: {
       "Content-Type": "application/json",
@@ -33,7 +33,7 @@ type TProductResponse = TServerResponse<TProduct>;
 export type TCreateProductResponse = TServerResponse<TProduct>;
 
 export const getProductById = (id: string) =>
-  fetch(`http://178.208.65.23:3000/posts/${id}`, {
+  fetch(`https://178.208.65.23/posts/${id}`, {
     method: "GET",
     headers: {
       "Content-Type": "application/json",
@@ -41,7 +41,7 @@ export const getProductById = (id: string) =>
   }).then((res) => checkResponse<TProduct>(res));
 
 export const likeProductApi = (id: string) =>
-  fetch(`http://178.208.65.23:3000/posts/${id}`, {
+  fetch(`https://178.208.65.23/posts/${id}`, {
     method: "PATCH",
     headers: {
       "Content-Type": "application/json",
@@ -50,7 +50,7 @@ export const likeProductApi = (id: string) =>
   }).then((res) => checkResponse<TProductResponse>(res));
 
 export const unLikeProductApi = (id: string) =>
-  fetch(`http://178.208.65.23:3000/posts/${id}`, {
+  fetch(`https://178.208.65.23/posts/${id}`, {
     method: "PATCH",
     headers: {
       "Content-Type": "application/json",
@@ -59,7 +59,7 @@ export const unLikeProductApi = (id: string) =>
   }).then((res) => checkResponse<TProductResponse>(res));
 
 export const deleteProductApi = (id: string) =>
-  fetch(`http://178.208.65.23:3000/posts/${id}`, {
+  fetch(`https://178.208.65.23/posts/${id}`, {
     method: "DELETE",
     headers: {
       "Content-Type": "application/json",
@@ -67,7 +67,7 @@ export const deleteProductApi = (id: string) =>
   }).then((res) => checkResponse<TProduct>(res));
 
 export const createProductApi = (productData: TCreateProductData) =>
-  fetch(`http://178.208.65.23:3000/posts`, {
+  fetch(`https://178.208.65.23/posts`, {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
