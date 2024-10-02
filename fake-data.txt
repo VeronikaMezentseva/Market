@@ -1,0 +1,70 @@
+{
+  "name": "Аквамарин",
+  "category": "Соленое",
+  "description": "Нежный, прозрачный напиток с освежающим вкусом океана. Содержит минералы, которые придают ему легкую соленость.",
+  "image": "https://masterpiecer-images.s3.yandex.net/e119b29a826911eeafd592669a1675b3:upscaled",
+  "isLiked": false
+},
+{
+  "name": "Стелларис",
+  "category": "Сладкое",
+  "description": "Хрустящие, звездные сладости с начинкой из карамелизированных фруктов. Каждый кусочек - словно маленькая галактика вкуса.",
+  "image": "https://masterpiecer-images.s3.yandex.net/60085144b4d844c:upscaled",
+  "isLiked": false
+},
+{
+  "name": "Галаксис",
+  "category": "Сладкое",
+  "description": "Тёмный, насыщенный шоколад с добавлением звездной пыли. Тает во рту, оставляя послевкусие космоса и загадки.",
+  "image": "https://masterpiecer-images.s3.yandex.net/a811196b952911ee8d1d720ccb3e265f:upscaled",
+  "isLiked": false
+},
+{
+  "name": "Цитрин",
+  "category": "Кислое",
+  "description": "Сочный фрукт с кисло-сладким вкусом. Его яркая, солнечная мякоть бодрит и повышает настроение.",
+  "image": "https://masterpiecer-images.s3.yandex.net/f9fe0f5f9bdd11ee9592429f31467427:upscaled",
+  "isLiked": false
+},
+{
+  "name": "Фиолетта",
+  "category": "Соленое",
+  "description": "Тонкий ароматный соус с нежным фиолетовым цветом. Идеально подходит к мясу, рыбе и овощам, добавляя изысканности к любому блюду.",
+  "image": "https://masterpiecer-images.s3.yandex.net/ea0e0d92705a11eeb060baea8797b5f2:upscaled",
+  "isLiked": false
+},
+{
+  "name": "Эмбера",
+  "category": "Сладкое",
+  "description": "Крепкий, обжигающий чай, сваренный из цветов, растущих на вулканических склонах. Придает сил и энергии, согревает в холодные вечера.",
+  "image": "https://masterpiecer-images.s3.yandex.net/b51b8e22aba211ee92e412e9024ad7c8:upscaled",
+  "isLiked": false
+},
+{
+  "name": "Аметист",
+  "category": "Кислое",
+  "description": "Мягкий, успокаивающий напиток, изготовленный из редкого аметистового экстракта. Придает коже сияние и молодость.",
+  "image": "https://masterpiecer-images.s3.yandex.net/c31028b6611411ee9fec3a7ca4cc1bdc:upscaled",
+  "isLiked": false
+},
+{
+  "name": "Рубинель",
+  "category": "Сладкое",
+  "description": "Специя, полученная из редких красных цветов. Добавляет блюдам яркий, сладковатый аромат и изысканный рубиновый оттенок.",
+  "image": "https://avatars.mds.yandex.net/get-shedevrum/10502823/dce500eec33611ee80234288c7f1f5c6/orig",
+  "isLiked": false
+},
+{
+  "name": "Соларис",
+  "category": "Соленое",
+  "description": "Хлеб, выпеченный из солнечной пшеницы. Его золотистый цвет и нежный вкус напоминают о летнем солнце.",
+  "image": "https://masterpiecer-images.s3.yandex.net/f425f82728b811eebdd256181a0358a2:upscaled",
+  "isLiked": false
+},
+{
+  "name": "Азур",
+  "category": "Кислое",
+  "description": "Сине-зелёный фрукт с освежающим, морским вкусом. Содержит антиоксиданты, которые укрепляют иммунитет.",
+  "image": "https://masterpiecer-images.s3.yandex.net/8781f0be45ac11ee8749da17faa977f8:upscaled",
+  "isLiked": false
+}

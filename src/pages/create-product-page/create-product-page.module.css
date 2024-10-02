@@ -1,0 +1,35 @@
+.main {
+  display: flex;
+  justify-content: center;
+  background-color: #19191b;
+  color: white;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+.input-name,
+.input-image {
+  padding: 10px 10px;
+}
+
+.input-description {
+  padding-top: 10px;
+  padding-left: 10px;
+}
+
+.button {
+  align-self: center;
+  font-size: 18px;
+  background-color: #fff;
+  border: none;
+  border-radius: 20px;
+  padding: 20px 40px;  
+}
+
+.button:hover {
+  background-color: #a1a1a1;
+}

@@ -1,0 +1,23 @@
+.like {
+  /* fill: red;
+  color: red; */
+}
+
+.path-no-like {
+  fill: transparent;
+  stroke: rgb(255, 255, 255);
+}
+
+.path-no-like:hover {
+  fill: red;
+}
+
+.path-liked {
+  fill: red;
+  color: red;
+  stroke: red;
+}
+
+.path-liked:hover {
+  stroke: white;
+}

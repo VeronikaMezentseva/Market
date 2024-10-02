@@ -1,0 +1,56 @@
+.card {
+  display: flex;
+  flex-direction: column;
+  max-width: 300px;
+  max-height: 400px;
+  min-height: 400px;
+  background-color: black;
+  color: white;
+  border-radius: 10px;
+}
+
+.labels-container {
+  display: block;
+  justify-content: space-between;
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.label {
+  margin: 10px;
+  padding: 5px 10px;
+  position: absolute;
+  background-color: #0022ff;
+  border-radius: 50px;
+  left: 0;
+}
+
+.like {
+  position: absolute;
+  right: 0;
+  margin: 10px;
+}
+
+.basket {
+  position: absolute;
+  right: 0px;
+  top: 50px;
+  margin: 10px;
+}
+
+.image {
+  width: 100%;
+  height: 100%;
+  border-radius: 10px 10px 0px 0px;
+}
+
+.product-info {
+  padding: 0px 0px 0px 15px;
+}
+
+.description {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}

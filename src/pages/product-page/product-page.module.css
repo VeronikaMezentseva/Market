@@ -1,0 +1,33 @@
+.main {
+  display: flex;
+  justify-content: center;
+  background-color: #19191b;
+}
+
+.product-container {
+  display: flex;
+  flex-direction: column;
+  color: white;
+}
+
+.label {
+  align-self: flex-start;
+  padding: 5px 10px;
+  background-color: #0022ff;
+  border-radius: 50px;
+}
+
+.image {
+  display: block;
+  align-self: center;
+  max-width: 500px;
+}
+
+.button {
+  margin-top: 35px;
+  padding: 25px 15px;
+  font-size: 18px;
+  border: none;
+  border-radius: 20px;
+  align-self: center;
+}
