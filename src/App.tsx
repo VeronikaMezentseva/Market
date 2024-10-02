@@ -5,16 +5,13 @@ import { Route, Routes } from "react-router-dom";
 import { HomePage } from "./pages/home-page/HomePage";
 import { ProductsPage } from "./pages/products-page/ProductsPage";
 import { useDispatch } from "./app/store";
-import { getProducts, selectProducts } from "./slices/products-slice";
+import { getProducts } from "./slices/products-slice";
 import { ProductPage } from "./pages/product-page/ProductPage";
 import { CreateProductPage } from "./pages/create-product-page/CreateProductPage";
-import { useSelector } from "react-redux";
 
 function App() {
 
   const dispatch = useDispatch();
-
-  const products = useSelector(selectProducts);
 
   useEffect(() => {
     dispatch(getProducts());
