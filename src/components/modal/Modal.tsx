@@ -1,4 +1,4 @@
-import { FC, MutableRefObject, ReactNode, useEffect, useRef, useState } from "react";
+import { FC, ReactNode, useEffect } from "react";
 import styles from "./modal.module.css";
 import ReactDOM from "react-dom";
 

@@ -1,20 +1,13 @@
-import { FC, MouseEventHandler, useState } from "react";
+import { FC, useState } from "react";
 import styles from "./basket.module.css";
 import { Modal } from "../modal/Modal";
-import { useDispatch } from "../../app/store";
-import {
-  TProduct,
-  deleteProductById,
-} from "../../slices/products-slice";
-import { useNavigate } from "react-router-dom";
+import { TProduct } from "../../slices/products-slice";
 
 export const SVGBasket: FC<{
   product: TProduct;
   onDelete: (evt: any, product: TProduct) => void;
 }> = ({ product, onDelete }) => {
-
   const [isOpenModal, setIsOpenModal] = useState(false);
-  const dispatch = useDispatch();
 
   const openModal = (evt: any) => {
     evt.preventDefault();

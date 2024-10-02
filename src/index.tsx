@@ -5,16 +5,16 @@ import { store } from './app/store';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import './index.css';
-import { BrowserRouter, Router } from 'react-router-dom';
+import { BrowserRouter } from 'react-router-dom';
 
 const container = document.getElementById('root')!;
 const root = createRoot(container);
 
 root.render(
   <React.StrictMode>
-    <BrowserRouter basename="/Market">
+    <BrowserRouter basename='/Market'>
       <Provider store={store}>
-        <App />
+        <App></App>
       </Provider>
     </BrowserRouter>
   </React.StrictMode>

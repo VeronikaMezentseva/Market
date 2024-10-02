@@ -12,7 +12,6 @@ import {
 import { useDispatch } from "../../app/store";
 
 export const ProductsPage: FC = () => {
-
   const products = useSelector(selectProducts);
   const likedProducts = useSelector(selectOnlyLikedProducts);
 
@@ -42,10 +41,7 @@ export const ProductsPage: FC = () => {
     return cards.map((product) => {
       return (
         <li key={product.id}>
-          <Card
-            product={product}
-            onDelete={handleDelete}
-          ></Card>
+          <Card product={product} onDelete={handleDelete}></Card>
         </li>
       );
     });
@@ -72,9 +68,7 @@ export const ProductsPage: FC = () => {
         />
         <label htmlFor="likedOnly">Продукты в избранном</label>
       </div>
-      <ul className={styles["card-container"]}>
-        { buildProducts() }
-      </ul>
+      <ul className={styles["card-container"]}>{buildProducts()}</ul>
     </main>
   );
 };
