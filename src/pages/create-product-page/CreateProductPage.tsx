@@ -1,4 +1,4 @@
-import { ChangeEvent, ChangeEventHandler, FC, useState } from "react";
+import { ChangeEvent, FC, useState } from "react";
 import styles from "./create-product-page.module.css";
 import { Category, TCreateProductData } from "../../utils/types";
 import { createProduct } from "../../slices/products-slice";
@@ -20,7 +20,11 @@ export const CreateProductPage: FC = () => {
 
   const onSubmit = (evt: any) => {
     evt.preventDefault();
-    if (errorTextName !== '' || errorTextDescription !== '' || errorTextImageUrl !== '') {
+    if (
+      errorTextName !== "" ||
+      errorTextDescription !== "" ||
+      errorTextImageUrl !== ""
+    ) {
       return;
     }
     const elements = evt.currentTarget.elements;
@@ -49,37 +53,37 @@ export const CreateProductPage: FC = () => {
     };
     dispatch(createProduct(product)).then((data) => {
       const product = data.payload as TCreateProductResponse;
-      navigate(`../products/${product.id}`, {replace: true});
+      navigate(`../products/${product.id}`, { replace: true });
     });
   };
 
-  const [errorTextName, setErrorTextName] = useState('');
-  const [errorTextDescription, setErrorTextDescription] = useState('');
-  const [errorTextImageUrl, setErrorTextImageUrl] = useState('');
+  const [errorTextName, setErrorTextName] = useState("");
+  const [errorTextDescription, setErrorTextDescription] = useState("");
+  const [errorTextImageUrl, setErrorTextImageUrl] = useState("");
 
   const handleChangeName = (evt: React.ChangeEvent<HTMLInputElement>) => {
     if (evt.target.value.length < 3 || evt.target.value.length > 12) {
-      setErrorTextName('Название должно быть от 3 до 12 символов');
+      setErrorTextName("Название должно быть от 3 до 12 символов");
     } else {
-      setErrorTextName('');
+      setErrorTextName("");
     }
   };
 
   const handleChangeDescription = (evt: ChangeEvent<HTMLTextAreaElement>) => {
     if (evt.target.value.length < 25) {
-      setErrorTextDescription('Описание должно быть от 25 символов');
+      setErrorTextDescription("Описание должно быть от 25 символов");
     } else {
-      setErrorTextDescription('');
+      setErrorTextDescription("");
     }
   };
 
   const handleChangeImage = (evt: React.ChangeEvent<HTMLInputElement>) => {
     if (!regexUrlValidation.test(evt.target.value)) {
-      setErrorTextImageUrl('Введите корректную ссылку');
+      setErrorTextImageUrl("Введите корректную ссылку");
     } else {
-      setErrorTextImageUrl('');
+      setErrorTextImageUrl("");
     }
-  }
+  };
 
   return (
     <>
@@ -99,7 +103,7 @@ export const CreateProductPage: FC = () => {
               maxLength={12}
               minLength={3}
             />
-            {errorTextName !== '' && <Error text={errorTextName}></Error>}
+            {errorTextName !== "" && <Error text={errorTextName}></Error>}
             <label>Описание продукта:</label>
             <textarea
               onChange={handleChangeDescription}
@@ -111,7 +115,9 @@ export const CreateProductPage: FC = () => {
               minLength={25}
               maxLength={660}
             />
-            {errorTextDescription !== '' && <Error text={errorTextDescription}></Error>}
+            {errorTextDescription !== "" && (
+              <Error text={errorTextDescription}></Error>
+            )}
             <div>
               <input
                 required
@@ -158,7 +164,9 @@ export const CreateProductPage: FC = () => {
               id="image"
               placeholder="Введите ссылку на изображение"
             />
-            {errorTextImageUrl !== '' && <Error text={errorTextImageUrl}></Error>}
+            {errorTextImageUrl !== "" && (
+              <Error text={errorTextImageUrl}></Error>
+            )}
             <input className={styles.button} type="submit" value="Создать" />
           </form>
         </div>

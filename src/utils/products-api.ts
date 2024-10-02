@@ -24,10 +24,6 @@ export const getProductsApi: () => Promise<TProduct[]> = () =>
     })
     .then((data) => data as TProduct[]);
 
-type TProductsResponse = TServerResponse<{
-  product: TProduct[];
-}>;
-
 type TProductResponse = TServerResponse<TProduct>;
 
 export type TCreateProductResponse = TServerResponse<TProduct>;

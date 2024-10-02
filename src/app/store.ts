@@ -4,11 +4,9 @@ import {
 } from 'react-redux';
 
 import { productsSlice } from '../slices/products-slice';
-import { productSlice } from '../slices/product-slice';
 
 export const rootReducer = combineReducers({
   [productsSlice.name]: productsSlice.reducer
-  // [productSlice.name]: productSlice.reducer
 })
 
 export const store = configureStore({
