@@ -1,0 +1,24 @@
+.main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: #19191b;
+}
+
+.card-container {
+  display: flex;
+  width: 80vw;
+  flex-wrap: wrap;
+  gap: 55px;
+  justify-content: center;
+  justify-items: center;
+  list-style: none;
+}
+
+.filter-container {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  margin: 30px 0;
+  color: white;
+}

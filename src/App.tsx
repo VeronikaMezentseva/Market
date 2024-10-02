@@ -1,57 +1,40 @@
-import React from 'react';
-import logo from './logo.svg';
-import { Counter } from './features/counter/Counter';
-import './App.css';
-
+import React, { useEffect, useState } from "react";
+import "./App.css";
+import { Header } from "./components/header/Header";
+import { Route, Routes } from "react-router-dom";
+import { HomePage } from "./pages/home-page/HomePage";
+import { ProductsPage } from "./pages/products-page/ProductsPage";
+import { AppDispatch, useDispatch } from "./app/store";
+import { getProducts, selectProducts } from "./slices/products-slice";
+import { ProductPage } from "./pages/product-page/ProductPage";
+import { createPortal } from "react-dom";
+import { CreateProductPage } from "./pages/create-product-page/CreateProductPage";
+import { useSelector } from "react-redux";
+// import { Overlay } from "./components/overlay/Overlay";
+// здесь должны быть роуты
 function App() {
+
+  const [modalOpen, setModalOpen] = useState(false);
+
+  const dispatch = useDispatch();
+
+  const products = useSelector(selectProducts);
+
+  useEffect(() => {
+    dispatch(getProducts());
+  }, [products]);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <Counter />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <span>
-          <span>Learn </span>
-          <a
-            className="App-link"
-            href="https://reactjs.org/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            React
-          </a>
-          <span>, </span>
-          <a
-            className="App-link"
-            href="https://redux.js.org/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Redux
-          </a>
-          <span>, </span>
-          <a
-            className="App-link"
-            href="https://redux-toolkit.js.org/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Redux Toolkit
-          </a>
-          ,<span> and </span>
-          <a
-            className="App-link"
-            href="https://react-redux.js.org/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            React Redux
-          </a>
-        </span>
-      </header>
-    </div>
+    <>
+      <Header></Header>
+      <Routes>
+        <Route path="/" element={<HomePage/>}></Route>
+        <Route path="/products" element={<ProductsPage/>}></Route>
+        <Route path="/products/:id" element={<ProductPage/>}></Route>
+        <Route path="/create-product" element={<CreateProductPage/>}></Route>
+      </Routes>
+      {/* <Overlay isOpen={modalOpen}></Overlay> */}
+    </>
   );
 }
 
